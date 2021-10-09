@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+//Add compression to speed up the site
 const compression = require('compression')
 const session = require('express-session');
 const exphbs = require('express-handlebars');
