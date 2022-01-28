@@ -1,4 +1,5 @@
 const path = require('path');
+var compression = require('compression')
 const express = require('express');
 //Add compression to speed up the site
 const compression = require('compression')
@@ -30,7 +31,7 @@ const sess = {
 
 // Add express-session and store as Express.js middleware
 app.use(session(sess));
-
+app.use(compression());
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
